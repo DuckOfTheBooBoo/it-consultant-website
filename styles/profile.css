@@ -5,40 +5,39 @@
   --neutral-color: #F5F5F5;
 }
 
-
-body{
-  font-family:  Helvetica, sans-serif;
+body {
+  font-family: Helvetica, sans-serif;
   margin: 0;
   padding: 0;
 }
 
 /* start of main css */
-.main-container{
+.main-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   background-color: var(--neutral-color);
   padding: 10px;
 }
 
-.main-text-container h3{
-  color: black;
-  font-size: 30px;
+.main-text-container h1 {
+  color: var(--primary-color);
+  font-size: 33px;
 }
 
-.main-text-container hr{
+.main-text-container hr {
   border: none;
   height: 1px;
-  background-color: black;
+  background-color: var(--primary-color); /* Changed to primary color */
   margin: 20px 0;
 }
 
-.main-container > .img-content{
+.main-container > .img-content {
   justify-content: center;
   margin-left: 30px;
   padding-top: 20px;
 }
 
-.main-container .img-content > img{
+.main-container .img-content > img {
   width: 100%;
   max-width: 600px;
   min-width: 250px;
@@ -46,15 +45,16 @@ body{
   max-height: 300px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
 /* end of main css */
 
 /* start of service section css */
-.service-text-container{
+.service-text-container {
   text-align: center;
   font-size: 28px;
 }
 
-.service-item-container{
+.service-item-container {
   display: grid;
   justify-items: center;
   grid-template-columns: 1fr 1fr 1fr;
@@ -63,7 +63,7 @@ body{
   background-color: var(--secondary-color);
 }
 
-.services{
+.services {
   padding: 5px;
   height: 100%;
   width: 60%;
@@ -72,5 +72,48 @@ body{
   border-radius: 15px;
 }
 
-
 /* end of service section css */
+
+/* Our Value css */
+
+.value-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: var(--neutral-color);
+  padding: 20px;
+  gap: 15px;
+  justify-content: space-around;
+}
+
+.value-text h3 {
+  text-align: center;
+  font-size: 28px;
+  padding-top: 10px;
+}
+
+.value-container .value {
+  border-radius: 15px;
+  width: 50%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.value {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+.value i {
+  padding-top: 10px;
+  font-size: 1.8em;
+  color: var(--primary-color);
+}
+
+.value h4,
+p {
+  font-size: 23px;
+}
+
+/* End of Our Value css */
