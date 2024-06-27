@@ -1,0 +1,76 @@
+:root {
+  --primary-color: #4DB6AC;
+  --secondary-color: #B0BEC5;
+  --accent-color: #FF7043;
+  --neutral-color: #F5F5F5;
+}
+
+
+body{
+  font-family:  Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* start of main css */
+.main-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: var(--neutral-color);
+  padding: 10px;
+}
+
+.main-text-container h3{
+  color: black;
+  font-size: 30px;
+}
+
+.main-text-container hr{
+  border: none;
+  height: 1px;
+  background-color: black;
+  margin: 20px 0;
+}
+
+.main-container > .img-content{
+  justify-content: center;
+  margin-left: 30px;
+  padding-top: 20px;
+}
+
+.main-container .img-content > img{
+  width: 100%;
+  max-width: 600px;
+  min-width: 250px;
+  border-radius: 15px;
+  max-height: 300px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+/* end of main css */
+
+/* start of service section css */
+.service-text-container{
+  text-align: center;
+  font-size: 28px;
+}
+
+.service-item-container{
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 30px;
+  gap: 30px;
+  background-color: var(--secondary-color);
+}
+
+.services{
+  padding: 5px;
+  height: 100%;
+  width: 60%;
+  background-color: var(--neutral-color);
+  text-align: center;
+  border-radius: 15px;
+}
+
+
+/* end of service section css */
