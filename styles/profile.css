@@ -16,7 +16,10 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   background-color: var(--neutral-color);
-  padding: 10px;
+  padding-left: 20px;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
 }
 
 .main-text-container h1 {
@@ -27,7 +30,7 @@ body {
 .main-text-container hr {
   border: none;
   height: 1px;
-  background-color: var(--primary-color); /* Changed to primary color */
+  background-color: var(--primary-color);
   margin: 20px 0;
 }
 
@@ -46,12 +49,38 @@ body {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+.cta-button{
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s ease-in-out;
+  
+  }
+
+  .cta-button:hover{
+    background-color: #ff5722;
+  }
+
 /* end of main css */
 
 /* start of service section css */
+.service-container {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--secondary-color);
+  height: 100vh;
+  padding: 20px;
+
+}
 .service-text-container {
   text-align: center;
-  font-size: 28px;
+  font-size: 30px;
+
 }
 
 .service-item-container {
@@ -60,7 +89,7 @@ body {
   grid-template-columns: 1fr 1fr 1fr;
   padding: 30px;
   gap: 30px;
-  background-color: var(--secondary-color);
+ 
 }
 
 .services {
@@ -83,12 +112,13 @@ body {
   padding: 20px;
   gap: 15px;
   justify-content: space-around;
+  
 }
 
 .value-text h3 {
   text-align: center;
-  font-size: 28px;
-  padding-top: 10px;
+  font-size: 30px;
+  padding-top: 20px;
 }
 
 .value-container .value {
@@ -106,14 +136,12 @@ body {
 }
 
 .value i {
-  padding-top: 10px;
-  font-size: 1.8em;
+  padding-top: 20px;
+  font-size: 2em;
   color: var(--primary-color);
 }
 
-.value h4,
-p {
+.value h4,p {
   font-size: 23px;
 }
-
 /* End of Our Value css */
