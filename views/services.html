@@ -12,16 +12,18 @@
             <h2>OUR SERVICES</h2>
             <p>We deliver innovative software solutions and strategic cloud implementations.</p>
         </div>
-        <div class="services">
-            <div class="service" id="eai">
-                <img src="../assets/UIUIX.webp" alt="">
-                <div class="bg"></div>
-                <div class="content">
-                    <h3>UI/UX Development</h3>
-                    <p>Our UI UX development service helps you create visually appealing and user-friendly interfaces for your software applications.</p>
+        <div class="services" id="services">
+            <a href="/views/services/uiux/uiux.html">
+                <div class="service" id="eai">
+                    <img src="../assets/UIUX.jpg" alt="">
+                    <div class="bg"></div>
+                    <div class="content">
+                        <h3>UI/UX Development</h3>
+                        <p>Our UI UX development service helps you create visually appealing and user-friendly interfaces for your software applications.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="service" id="eai">
+            </a>
+            <div class="service" id="uiux">
                 <img src="../assets/EAI.jpg" alt="">
                 <div class="bg"></div>
                 <div class="content">
@@ -82,13 +84,33 @@
     <div class="clients-container">
         <h2>TRUSTED BY</h2>
         <div class="clients">
-            <img src="../assets/logo/airbnb_optimized.png" alt="">
-            <img src="../assets/logo/dropbox_optimized.png" alt="">
-            <img src="../assets/logo/goto_optimized.png" alt="">
-            <img src="../assets/logo/grab_optimized.png" alt="">
-            <img src="../assets/logo/reddit_optimized.png" alt="">
-            <img src="../assets/logo/stripe_optimized.png" alt="">
+            <img src="../assets/logo/airbnb_optimized.png" alt="Airbnb logo">
+            <img src="../assets/logo/dropbox_optimized.png" alt="Dropbox logo">
+            <img src="../assets/logo/goto_optimized.png" alt="Goto logo">
+            <img src="../assets/logo/grab_optimized.png" alt="Grab logo">
+            <img src="../assets/logo/reddit_optimized.png" alt="Reddit logo">
+            <img src="../assets/logo/stripe_optimized.png" alt="Stripe">
         </div>
     </div>
+
+    <script>
+        // const servicesDiv = document.getElementById("services")
+
+        // services.forEach(service => {
+        //     const div = document.createElement("div")
+        //     div.classList.add("service")
+        //     div.id = service.id
+        //     div.innerHTML = `
+        //         <img src="${service.src}" alt="">
+        //         <div class="bg"></div>
+        //         <div class="content">
+        //             <h3>${service.title}</h3>
+        //             <p>${service.desc}</p>
+        //         </div>
+        //     `
+        //     servicesDiv.appendChild(div)
+        // })
+
+    </script>
 </body>
 </html>
