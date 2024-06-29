@@ -1,12 +1,12 @@
 :root {
-  --primary-color: #4DB6AC;
-  --secondary-color: #B0BEC5;
-  --accent-color: #FF7043;
-  --neutral-color: #F5F5F5;
+  --primary-color: #222831;
+  --secondary-color: #393E46;
+  --accent-color: #00ADB5;
+  --neutral-color: #EEEEEE;
 }
 
 body {
-  font-family: Helvetica, sans-serif;
+  font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -58,14 +58,10 @@ body {
   cursor: pointer;
   border-radius: 5px;
   font-size: 16px;
-  transition: background-color 0.3s ease-in-out;
-  
+  transition: background-color 0.3s ease-in-out;  
+  text-decoration: none;
+  border-radius: 15px;
   }
-
-  .cta-button:hover{
-    background-color: #ff5722;
-  }
-
 /* end of main css */
 
 /* start of service section css */
@@ -80,7 +76,7 @@ body {
 .service-text-container {
   text-align: center;
   font-size: 30px;
-
+  color: var(--neutral-color);
 }
 
 .service-item-container {
@@ -138,7 +134,7 @@ body {
 .value i {
   padding-top: 20px;
   font-size: 2em;
-  color: var(--primary-color);
+  color: var(--accent-color);
 }
 
 .value h4,p {
