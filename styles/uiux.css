@@ -79,6 +79,7 @@ h2 > span {
     align-items: center;
     justify-content: center;
     margin-top: 3rem;
+    height: fit-content;
 }
 
 .timeline-image {
@@ -95,6 +96,7 @@ h2 > span {
 
 .timelines {
     width: 50%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -106,24 +108,13 @@ h2 > span {
 
 
 .timeline-item {
+    position: relative;
     display: flex;
     align-items: center;
-}
-
-.line {
-    position: relative;
-    margin-right: 1rem;
-}
-
-.line::before {
-    content: "";
-    display: block;
-    width: 1rem; /* Adjust the width of the line */
-    height: 100%; /* Full height of the parent container */
-    background-color: #00ADB5; /* Color of the line */
-    position: absolute;
-    left: 0;
-    top: 0;
+    height: 100%;
+    padding: 1rem;
+    border-radius: 5px;
+    transition: box-shadow 0.1s ease, border-radius 0.1s ease;
 }
 
 .content > h2 {
@@ -138,6 +129,13 @@ h2 > span {
 
 .timeline-item:hover {
     cursor: pointer;
+}
+
+.timeline-active {
+    border-radius: 10px;
+background: #ffffff;
+box-shadow: inset 25px 25px 49px #e3e3e3,
+            inset -25px -25px 49px #ffffff;
 }
 
 .timeline-inactive {
