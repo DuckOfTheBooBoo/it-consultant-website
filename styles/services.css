@@ -78,6 +78,7 @@ p {
     filter: grayscale(100%);
 }
 
+
 #cicd > img {
     object-fit: contain;
     transform: scale(1.2);
