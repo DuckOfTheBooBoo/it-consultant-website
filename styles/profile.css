@@ -49,14 +49,16 @@ body {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+.button{
+  padding-top: 20px;
+}
+
 .cta-button{
   background-color: var(--accent-color);
   color: white;
   border: none;
   padding: 10px 20px;
-  margin-top: 20px;
   cursor: pointer;
-  border-radius: 5px;
   font-size: 16px;
   transition: background-color 0.3s ease-in-out;  
   text-decoration: none;
@@ -64,80 +66,113 @@ body {
   }
 /* end of main css */
 
-/* start of service section css */
-.service-container {
+/* start of visi misi section css */
+.visi-misi-container{
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  gap: 20px;
+  padding: 20px;
+}
+
+.visi-misi-container{
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  max-width: 1400px;
+}
+
+
+.visi-misi-image-container > img{
+  width: 100%;
+  height: 100%;
+}
+
+.visi-misi-text-container{
   display: flex;
   flex-direction: column;
-  background-color: var(--secondary-color);
-  height: 100vh;
-  padding: 20px;
-
-}
-.service-text-container {
-  text-align: center;
-  font-size: 30px;
-  color: var(--neutral-color);
+  justify-content: center;
+  align-items: start;
+  padding-left: 90px;
 }
 
-.service-item-container {
-  display: grid;
-  justify-items: center;
-  grid-template-columns: 1fr 1fr 1fr;
-  padding: 30px;
-  gap: 30px;
- 
+.visi-misi-text-container h2{
+  font-size: 40px;
+  font-weight: 700;
 }
 
-.services {
-  padding: 5px;
-  height: 100%;
-  width: 60%;
-  background-color: var(--neutral-color);
-  text-align: center;
-  border-radius: 15px;
+.visi-misi-text-container p{
+  font-size: 20px;
+  padding-left: 20px;
 }
 
-/* end of service section css */
+.visi-misi-text-container h3{
+  font-size: 25px;
+  text-align: start;
+}
+
+.visi-misi-container ul li{
+font-size: 20px;
+padding-left: 20px;
+size: 15px;
+}
+
+
+/* end of visi misi section css */
 
 /* Our Value css */
-
-.value-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  background-color: var(--neutral-color);
-  padding: 20px;
-  gap: 15px;
-  justify-content: space-around;
-  
+.value-container{
+background-color: var(--neutral-color);
+display: flex;
+flex-direction: row;
+height: 100vh;
+justify-content: space-between;
+align-items: center;
+padding: 20px;
 }
 
-.value-text h3 {
-  text-align: center;
-  font-size: 30px;
-  padding-top: 20px;
+.text-content {
+  max-width: 40%;
+  padding: 20px ;
 }
 
-.value-container .value {
-  border-radius: 15px;
-  width: 50%;
-  height: 100%;
-  margin: 0 auto;
+.text-content h2{
+  font-size: 48px;
+  margin-bottom: 1.1em;
 }
 
-.value {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  align-items: center;
+.text-content p{
+  font-size: 20px;
 }
 
-.value i {
-  padding-top: 20px;
-  font-size: 2em;
-  color: var(--accent-color);
+.values-items-container{
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 20px;
+max-width: 50%;
 }
 
-.value h4,p {
-  font-size: 23px;
+.values-item{
+background-color: white;
+padding: 20px;
+border-radius: 8px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+text-align: center;
 }
+
+.values-item  i{
+font-size: 30px;
+color: var(--accent-color);
+margin-bottom: 10px;
+}
+
+.values-item  h4{
+margin: 10px 0;
+}
+
+.values-item p {
+color: #666;
+}
+
+
 /* End of Our Value css */
