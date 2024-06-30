@@ -31,6 +31,10 @@ p {
   position: absolute;
 }
 
+.basic-left > h1, .basic-left > p, .basic-left > h2 {
+  color: #EEEEEE;
+}
+
 .basic-left > h1 {
   font-size: 5rem;
 }
@@ -41,10 +45,6 @@ p {
 
 .basic-left > h2 {
   margin-bottom: 0.5rem;
-}
-
-h2 > span {
-  color: #00adb5;
 }
 
 .basic-info > img {
@@ -60,7 +60,7 @@ h2 > span {
   height: 100%;
   background-image: linear-gradient(
     to right,
-    #00adb5 10%,
+    #00adb5 20%,
     rgba(0, 0, 0, 0) 100%
   );
 }
