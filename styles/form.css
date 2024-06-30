@@ -1,0 +1,75 @@
+:root {
+  --primary-color: #222831;
+  --secondary-color: #393E46;
+  --accent-color: #00ADB5;
+  --neutral-color: #EEEEEE;
+}
+
+body {
+  background-color: var(--neutral-color);
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+
+form{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+ 
+}
+
+form > input, select{
+  padding: 0.5rem;
+}
+
+form > input, select:focus{
+  outline: none;
+  
+}
+
+.button {
+  align-self: center;
+  padding: 10px;
+}
+
+.button > button{
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+    width: 100px;
+    text-decoration: none;
+    color: #fff;
+    background-color: var(--accent-color);
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: background-color 0.15s ease-in-out;
+}
+
+button:hover {
+  background-color: #00b5c2;
+}

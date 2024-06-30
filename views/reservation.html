@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reservation</title>
+  <link rel="stylesheet" href="../styles/form.css">
+</head>
+<body>
+  <section>
+    <div class="container">
+      <div class="form-container">
+        <form method="post">
+          <h1>Reservation Form</h1>
+          <label for="name">Name</label>
+          <input type="text" name="name" id="name" placeholder="Enter your name" required>
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" placeholder="Enter your email" required>
+          <label for="phone">Phone</label>
+          <input type="tel" name="phone" id="phone" placeholder="+62 8xx-xxxx-xxx" required>
+          <label for="date">Date</label>
+          <input type="date" name="date" id="date" required>
+          <label for="service">Choose your service: </label>
+          <select name="service" id="service">
+            <option value="Web Developmet">Web & Mobile Apps development</option>
+            <option value="UI/UX Development">UI/UX Development</option>
+            <option value="API Development & Integration">API Development & Integration</option>
+            <option value="Cloud Strategy & Migration">Cloud Strategy & Migration</option>
+            <option value="Cloud Platform Selection & Implementation">Cloud Platform Selection & Implementation</option>
+            <option value="Cloud-Native Application Development">Cloud-Native Application Development</option>
+            <option value="DevOps & CI/CD">DevOps & CI/CD</option>
+          </select>
+        <div class="button">
+        <button type="submit" name="submit" form="form">Submit</button></div> 
+        </form>
+      </div>
+    </div>
+  </section>
+  
+</body>
+</html>
