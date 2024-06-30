@@ -43,7 +43,7 @@ body{
 }
 
 .contact-sub-text-container p{
-  font-size: 1.25rem;
+  font-size: 1.30rem;
   line-height: 1.75rem;
 }
 
@@ -58,12 +58,18 @@ body{
   color: var(--secondary-color);
 }
 
+.contact-item span{
+  font-size: 1.1rem;
+  font-weight: 400;
+  padding-left: 20px;
+}
+
 .button a{
   background-color: var(--accent-color);
 display: inline-block;
 padding: 10px 20px;
 color: white;
 text-decoration: none;
-border-radius: 25px;
-margin-top: 20px;
+border-radius: 15px;
+margin-top: 30px;
 }
