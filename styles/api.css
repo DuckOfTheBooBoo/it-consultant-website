@@ -1,3 +1,11 @@
+:root {
+  --primary-color: #222831;
+  --secondary-color: #393e46;
+  --accent-color: #00adb5;
+  --neutral-color: #eeeeee;
+  --neutral-color-50: rgba(255, 255, 255, 0.5);
+}
+
 * {
   font-family: "Poppins", sans-serif;
 }
@@ -5,6 +13,52 @@
 body {
   margin: 0;
   padding: 0;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 16%;
+  background-color: var(--primary-color);
+  border-bottom: 1px solid var(--accent-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  color: var(--neutral-color);
+}
+
+.navbar-logo a {
+  font-family: "Playfair Display", serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--neutral-color);
+  font-style: italic;
+}
+
+.navbar-logo a span {
+  font-weight: normal;
+  margin: auto 0 auto 3px;
+}
+
+.navbar-nav a {
+  display: inline-block;
+  font-size: 1.4rem;
+  margin: 0 10px;
+  color: var(--neutral-color-50);
+}
+
+.navbar-nav a:hover {
+  color: var(--neutral-color);
+}
+
+.navbar-nav a.active {
+  color: var(--col5);
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--neutral-color);
 }
 
 h1,
@@ -166,7 +220,7 @@ p {
   font-weight: 600;
 }
 
-.contact-us > button {
+a > button {
   font-size: 1rem;
   margin-top: 1.5rem;
   padding: 0.5rem 2rem;
@@ -175,7 +229,7 @@ p {
   opacity: 0.8;
 }
 
-.contact-us > button:hover {
+a > button:hover {
   cursor: pointer;
   opacity: 1;
 }
