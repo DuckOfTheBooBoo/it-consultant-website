@@ -14,6 +14,10 @@
 
         <!-- icons -->
         <script src="https://kit.fontawesome.com/386e64cde3.js" crossorigin="anonymous"></script>
+        <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"
+    />
     </head>
     <body>
         <header>
@@ -50,7 +54,7 @@
                             <label for="email">Email</label>
                             <input type="email" name="email" id="email" placeholder="Enter your email" required/>
                             <label for="phone">Phone</label>
-                            <input type="tel" name="phone" id="phone" placeholder="+62 8xx-xxxx-xxx" required/>
+                            <input type="number" name="phone" id="phone" placeholder="+62 8xx-xxxx-xxx" required/>
                             <label for="date">Date</label>
                             <input type="date" name="date" id="date" required/>
                             <label for="service">Choose your service:
@@ -75,7 +79,7 @@
                                 <option value="DevOps & CI/CD">DevOps & CI/CD</option>
                             </select>
                             <div class="button">
-                                <button type="submit" name="submit" form="form">Submit</button>
+                                <button type="submit" name="submit" form="form" id="submit">Submit</button>
                             </div>
                         </form>
                     </div>
@@ -114,13 +118,75 @@
             <!-- POP UP END -->
         </main>
 
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script>
-          const form = document.querySelector('#form')
+           // Form Validation and Submission
+ const form = document.getElementById("form");
+ const emailInput = document.getElementById("email");
+ const submitButton = document.getElementById("submit");
+ const loadingIndicator = document.createElement("span");
 
-          form.addEventListener('submit', (e) => {
-            e.preventDefault()
-            alert('Thank you for your reservation!')
-          })
+ loadingIndicator.classList.add("loading");
+ submitButton.appendChild(loadingIndicator);
+
+ function validateEmail(email) {
+   const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+   return re.test(String(email).toLowerCase());
+ }
+
+ form.addEventListener("submit", async function (event) {
+   event.preventDefault();
+   const email = emailInput.value.trim();
+
+   if (!validateEmail(email)) {
+     Swal.fire({
+       icon: "error",
+       title: "Invalid Email",
+       text: "Please enter a valid email address.",
+     });
+     return;
+   }
+
+   submitButton.disabled = true;
+   loadingIndicator.classList.add("active");
+
+   const data = new FormData(form);
+   try {
+     const response = await fetch(form.action, {
+       method: form.method,
+       body: data,
+       headers: { Accept: "application/json" },
+     });
+
+     if (response.ok) {
+       Swal.fire({
+         icon: "success",
+         title: "Success",
+         text: "Thanks for your submission!",
+       });
+       form.reset();
+     } else {
+       const responseData = await response.json();
+       const errorMessages = responseData.errors
+         ? responseData.errors.map((error) => error.message).join(", ")
+         : "Oops! There was a problem submitting your form.";
+       Swal.fire({
+         icon: "error",
+         title: "Submission Error",
+         text: errorMessages,
+       });
+     }
+   } catch (error) {
+     Swal.fire({
+       icon: "error",
+       title: "Submission Error",
+       text: "Oops! There was a problem submitting your form.",
+     });
+   } finally {
+     submitButton.disabled = false;
+     loadingIndicator.classList.remove("active");
+   }
+ });
         </script>
     </body>
 </html>
